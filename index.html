@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Find Fours!
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="words.js"></script>
+        <script src="findfours.js"></script>
+        <link rel="stylesheet" href="findfours.css">
+    </head>
+
+    <body>
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                <div class="form-group-row">
+                    <textarea id="output" class="form-control white-space-pre-line" rows="15" readonly>
+                        Welcome to Find Fours!&NewLine;
+                        Enter a four letter word below to begin. &NewLine;
+                        Enter...
+                        &NewLine;&gt;see - to see the number of valid words that can be created from the current word.
+                        &NewLine;&gt;sos - to play a word and use 1 SOS. You start with 5 SOSs and get 1 SOS for every 5 valid inputs (SOSs included)
+                        &NewLine;&gt;random - to begin with a random 4 letter word.
+                    </textarea>
+                    <div class="input-group mt-2">
+                        <input type="text" class="form-control" id="input" placeholder="Enter the word here" autocomplete="off">
+                        <div class="input-group-append">
+                        <button type="submit" id="submit" class="btn btn-outline-warning" onclick="mainGameFunction()">Play</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-12 col-md-3 mt-sm-2 mt-md-0 mb-3">
+                    <a class="btn btn-primary" data-toggle="collapse" href="#divPlayed" role="button" aria-expanded="false" aria-controls="divPlayed">Played Words</a>
+                    <div class="collapse mt-2" id="divPlayed">
+                        <textarea id="played" class="form-control" rows="13" readonly>
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

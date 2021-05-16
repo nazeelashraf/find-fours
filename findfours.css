@@ -1,0 +1,11 @@
+textarea {
+    resize: none;
+  }
+  
+  .error {
+    color: tomato;
+  }
+  
+  .white-space-pre-line {
+    white-space: pre-line;
+  }
